@@ -1,0 +1,39 @@
+/*....header de la page principale...*/
+.header {
+    padding: 15px 0 8px 0px;
+    box-shadow: 0 0 16px 0 #0000002e;
+    text-align: center;
+    &__image {
+      justify-content: center;
+    }
+  }
+
+  /****Pour le Header1******/
+
+  .header1 {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1440px;
+    position: relative;
+    padding: 10px 0 10px 0;
+
+  &__back {
+    font-size: 19px;
+    position: absolute;
+    left: 20px;
+    top: 13px;
+    max-width: 1440px;
+
+    a {
+      color: black;
+    }
+  }
+  &__title {
+    a {
+      font-family: "Shrikhand", sans-serif;
+      font-size: 28px;
+      color: black;
+    }
+  }
+}
