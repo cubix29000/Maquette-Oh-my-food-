@@ -41,4 +41,15 @@
       animation-delay: 1s;
     }
   }
+/***Animation des coeurs, un coeur en présentation qui se colore****/
+
+.fa-heart-animated {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  font-size: 0px;
+  color: #9356DC;
+  font-weight: bold;
+  transition-duration: 0.5s;
   
