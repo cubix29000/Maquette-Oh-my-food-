@@ -101,7 +101,10 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transition: all 0.3s ease;
+  -webkit-animation: slide 1s;
+          animation: slide 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
 /*page de détail*/
@@ -405,7 +408,7 @@
 .subheader {
   display: flex;
   justify-content: center;
-  background-color: #E4E9EC;
+  background-color: #C8C8C8;
 }
 .subheader__image {
   width: 100%;
@@ -424,6 +427,7 @@
   margin: 10px 10px 10px 0px;
 }
 .subheader__content {
+  border: none;
   margin: 10px 10px 5px 0px;
 }
 .subheader__content a {
@@ -436,6 +440,41 @@
     height: 35vh;
   }
 }
+/**********LOADER DE LA PAGE PRINCIPALE********************/
+.bloc {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  -webkit-animation: off;
+          animation: off;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  transition: opacity 3s ease-in-out;
+  -webkit-animation-delay: 1.75;
+          animation-delay: 1.75;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.bloc__loader {
+  align-items: center;
+  justify-content: center;
+  border: solid 17px lightgrey;
+  border-radius: 50%;
+  z-index: 1;
+  width: 167px;
+  height: 167px;
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  border-top-color: #9356dc;
+  -webkit-animation: rotate linear infinite;
+          animation: rotate linear infinite;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
 /**Pages**/
 /****container de la page détail****/
 .container {
@@ -456,6 +495,8 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
+  background: rgb(169, 33, 184);
+  background: linear-gradient(0deg, rgb(169, 33, 184) 1%, rgb(175, 0, 255) 49%);
 }
 .button__text {
   color: white;
@@ -474,61 +515,141 @@
 /****Les couleurs générales du sites****/ /*Animation du défilement du menu*/
 @-webkit-keyframes appear {
   0% {
-    transform: scale(0);
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-0.5rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(0.5rem);
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
+  }
+  0% {
+    opacity: 0;
+    z-index: -1;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    z-index: 0;
+    transform: translateY(0);
   }
 }
 @keyframes appear {
   0% {
-    transform: scale(0);
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-0.5rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(0.5rem);
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
+  }
+  0% {
+    opacity: 0;
+    z-index: -1;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    z-index: 0;
+    transform: translateY(0);
   }
 }
-.anim-1 {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
+@-webkit-keyframes slide {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-4rem);
+  }
 }
-.anim-2 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+@keyframes slide {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-4rem);
+  }
 }
-.anim-3 {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-.anim-4 {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-.anim-5 {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-.anim-6 {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-.anim-7 {
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
-}
-.anim-8 {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-}
-.anim-9 {
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
-}
-.anim-10 {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+/* Animation du coeur*/
+.fa-heart-animated {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: 0;
+  font-size: 0px;
+  color: #9356DC;
+  font-weight: bold;
+  transition-duration: 0.5s;
 }
 
+/* Animation du loader */
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Animation du bloc */
+@-webkit-keyframes off {
+  from {
+    opacity: 90%;
+  }
+  to {
+    display: none;
+    opacity: 0%;
+    z-index: 1;
+  }
+}
+@keyframes off {
+  from {
+    opacity: 90%;
+  }
+  to {
+    display: none;
+    opacity: 0%;
+    z-index: 1;
+  }
+}
+/* Animation du bouton */
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /***Base***/
 /***Polices appliquées sur l ensemble de l application***/
 @font-face {
@@ -548,19 +669,91 @@ a {
   text-decoration: none;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -570,8 +763,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -579,16 +781,24 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+a:link {
+  text-decoration: none;
+}
+
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -598,7 +808,6 @@ table {
   border-spacing: 0;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*//*# sourceMappingURL=style.css.map */
+body {
+  font-family: "Roboto", sans-serif;
+}/*# sourceMappingURL=style.css.map */
