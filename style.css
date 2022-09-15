@@ -34,6 +34,10 @@
   color: black;
 }
 
+/*****les box de menu des restaurants******/
+.box {
+  /****check box sur les pages de restaurants ****/
+}
 .box__menu__title {
   margin: 24px 0px 8px 18px;
   border-bottom: 3px solid #99e2d0;
@@ -45,7 +49,6 @@
   background-color: white;
   width: 92%;
   display: block;
-  /*****centré******/
   margin-left: auto;
   margin-right: auto;
   margin-top: 12px;
@@ -61,6 +64,7 @@
 }
 .box__contents {
   display: flex;
+  /***coté droit de la check box****/
 }
 .box__contents:hover .box__check {
   width: 40px;
@@ -103,10 +107,7 @@
   align-items: center;
   overflow: hidden;
   transition: all 0.6s ease;
-  -webkit-animation: slide 1s;
-          animation: slide 1s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  /***animation: slide 0.5s;****/
 }
 
 /*page de détail*/
@@ -135,8 +136,12 @@
     width: calc(33.3% - 2px);
   }
 }
+.box__contents:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+
 .footer {
-  background-color: #787878;
+  background-color: #363636;
   padding: 18px 0px 18px 24px;
   margin-top: -30px;
 }
@@ -144,8 +149,10 @@
   color: white;
 }
 .footer__title {
-  font-size: 20px;
-  font-family: "shrikhand";
+  font-weight: 400;
+  text-indent: 7%;
+  font-size: 1.15rem;
+  font-family: "Shrikhand", cursive;
 }
 .footer__content {
   margin-top: 15px;
@@ -217,14 +224,15 @@
 }
 .main--1__content__title {
   font-size: 30px;
-  font-family: "shrikhand";
+  font-family: "shrikhand", cursive;
   padding: 0px 44px 0px 0px;
 }
-.main--1__content__heart  {
+.main--1__content__heart {
   position: relative;
   height: 21px;
 }
 
+/****coloration du 3 step dans la section fonctionnement*******/
 .section--fonctionnement :nth-child(4) {
   background-color: #F8D8FC;
 }
@@ -236,6 +244,7 @@
 }
 #heart--icon:hover .fa-heart-animated {
   font-size: 20px;
+  background-color: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
 }
 
 /*-----RESPONSIVE---------- */
@@ -300,6 +309,7 @@
   padding-bottom: 45px;
 }
 .section--restaurants .resto {
+  background-color: #ffffff;
   border-radius: 15px;
   width: 88%;
   height: 205px;
@@ -348,6 +358,7 @@
 }
 .section--restaurants .resto__heart:hover .fa-heart-animated {
   font-size: 25px;
+  background-color: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
 }
 
 /*------Responsive------- */
@@ -411,6 +422,15 @@
     margin: 15px;
   }
 }
+.section--fonctionnement :nth-child(4) {
+  background-color: #f5edff;
+}
+
+.step--fonctionnement icon :nth-child(4) {
+  color: #9356dc;
+}
+
+/********barre de recherche avec recherche du lieu de restauration*****/
 .subheader {
   display: flex;
   justify-content: center;
@@ -433,10 +453,12 @@
   margin: 10px 10px 10px 0px;
 }
 .subheader__content {
-  margin: 10px 10px 5px 0px;
+  margin: 10px 10px 10px 0px;
 }
 .subheader__content a {
   color: black;
+  margin-bottom: auto;
+  margin-top: auto;
 }
 
 /* RESPONSIVE*/
@@ -488,36 +510,8 @@
   top: -30px;
 }
 
-/****Components****/
-/***les buttons avec les dégradés de rose a violet**/
-.button {
-  border-radius: 20px;
-  height: 40px;
-  border: none;
-  width: 230px;
-  box-shadow: 5px 6px 7px rgba(0, 0, 0, 0.1803921569);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
-  background: rgb(169, 33, 184);
-  background: linear-gradient(0deg, rgb(169, 33, 184) 1%, rgb(175, 0, 255) 49%);
-}
-.button__text {
-  color: white;
-  text-align: center;
-}
-.button:hover {
-  filter: brightness(0.5);
-  cursor: pointer;
-  opacity: 1;
-  -webkit-animation: flash 1.5s;
-          animation: flash 1.5s;
-  box-shadow: 5px 15px 21px rgba(0, 0, 0, 0.5019607843);
-}
-
 /****Utils*****/
-/****Les couleurs générales du sites****/ /*Animation du défilement du menu*/
+/****Les couleurs générales du sites****/ /***********Animation du défilement du menu**************/
 @-webkit-keyframes appear {
   0% {
     opacity: 0;
@@ -558,29 +552,36 @@
     transform: translateX(-4rem);
   }
 }
-/* Animation du coeur*/
+/******Animation des coeurs sur la pages d accueil********/
 .fa-heart-animated {
   position: absolute;
   right: 50%;
   transform: translateX(50%);
   bottom: 0;
   font-size: 0px;
-  color: #9356DC;
-  font-weight: bold;
+  color: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
+  /**font-weight: bold;***/
   transition-duration: 0.5s;
 }
 
 /****************** Animation du loader *********************/
-/************** @keyframes rotate {
-   from {
-     transform: rotate(0deg);
-   }
-   to {
-     transform: rotate(360deg);
-   }
- }
- /*******************
- /* Animation du bloc */
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Animation du bloc */
 @-webkit-keyframes off {
   from {
     opacity: 90%;
@@ -601,22 +602,85 @@
     z-index: -1;
   }
 }
+@-webkit-keyframes tour {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes tour {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+/****Components****/
+/***les buttons avec les dégradés de rose a violet**/
+.button {
+  border-radius: 20px;
+  height: 40px;
+  border: none;
+  width: 230px;
+  box-shadow: 5px 6px 7px rgba(0, 0, 0, 0.1803921569);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  /****animation et eclaircissement lors de l action****/
+}
+.button__text {
+  color: white;
+  text-align: center;
+}
+.button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  -webkit-animation: flash 1.5s;
+          animation: flash 1.5s;
+  box-shadow: 5px 15px 21px rgba(0, 0, 0, 0.5019607843);
+}
+
 /***Base***/
 /***Polices appliquées sur l ensemble de l application***/
-@font-face {
-  font-family: "Roboto";
-  src: url("Polices/Roboto/Roboto-Regular-webfont.ttf");
+/*** h1,
+ h2,
+ h3,
+ a {
+  /**font-family: "shrikhand", cursive;**/
+body {
+  font-family: "Roboto", sans-serif;
 }
-@font-face {
-  font-family: "shrikhand";
-  src: url("Polices/shrikhand/Shrikhand-Regular.ttf");
+
+.fa-check-circle {
+  content: \e7cd;
+  font-size: 1.25rem;
+  color: white;
+  transition: transform 0.4s;
 }
-h1,
-h2,
-h3,
-p,
-a {
-  font-family: "Roboto";
+
+.fa-store {
+  color: #9356dc;
+}
+
+.fa-heart-animated {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: 0;
+  font-size: 0px;
+  background: linear-gradient(120deg, #FF79DA 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition-duration: 0.5s;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -708,7 +772,6 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
