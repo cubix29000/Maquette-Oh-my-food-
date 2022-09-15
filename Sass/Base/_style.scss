@@ -1,20 +1,39 @@
 /***Polices appliquées sur l ensemble de l application***/
-@font-face {
-    font-family: "Roboto";
-    src: url("Polices/Roboto/Roboto-Regular-webfont.ttf");
-  }
-  
-  @font-face {
-    font-family: "shrikhand";
-    src: url("Polices/shrikhand/Shrikhand-Regular.ttf");
-  }
-  
-  h1,
+ /*** h1,
   h2,
   h3,
-  p,
   a {
-    font-family: "Roboto";
-    text-decoration: none;
-  }
+   /**font-family: "shrikhand", cursive;**/
   
+  body
+  {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .fa-check-circle {
+    content: \e7cd;
+    font-size: 1.25rem;
+    color: white;
+    transition: transform 0.4s ;
+  }
+  .fa-store {
+    color: #9356dc ;
+  }
+  .fa-heart-animated {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 0;
+    font-size: 0px;
+    background: linear-gradient(120deg,#FF79DA 0%,#9356dc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition-duration: 0.5s;
+  }
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
