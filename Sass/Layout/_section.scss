@@ -50,10 +50,12 @@
       }
     }
   
+  
     &--restaurants {
       background-color: #86868629;;
       padding-bottom: 45px;
       .resto {
+        background-color: #ffffff;
         border-radius: 15px;
         width: 88%;
         height: 205px;
@@ -64,6 +66,7 @@
         margin-right: auto;
         margin-top: 12px;
         margin-bottom: 20px;
+
   
         &__image img {
           width: 100%;
@@ -98,9 +101,11 @@
           right: 28px;
           bottom: 30px;
           font-size: 25px;
+          
   
           &:hover .fa-heart-animated {
             font-size: 25px;
+            background-color: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
           }
         }
         }
@@ -193,4 +198,9 @@
       }
     }
   }
-  
+  .section--fonctionnement :nth-child(4) {
+    background-color: #f5edff;
+  }
+  .step--fonctionnement icon :nth-child(4){
+    color: #9356dc ;
+  }
