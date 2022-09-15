@@ -14,16 +14,17 @@
   
         &__title {
           font-size: 30px;
-          font-family: "shrikhand";
+          font-family: "shrikhand", cursive;
           padding: 0px 44px 0px 0px;
         }
-        &__heart {
+        &__heart{
           position: relative;
           height: 21px;
         }
       }
     }
   }
+  /****coloration du 3 step dans la section fonctionnement*******/
   .section--fonctionnement :nth-child(4) {
     background-color:#F8D8FC ;
   }
@@ -34,6 +35,7 @@
     cursor: pointer;
     &:hover .fa-heart-animated {
       font-size: 20px;
+      background-color: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
     }
   }
   
