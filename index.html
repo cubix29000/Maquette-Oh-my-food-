@@ -8,21 +8,28 @@
     <script src="https://kit.fontawesome.com/3ee1cc3628.js" crossorigin="anonymous"></script>
     <title>OHMYFOOD</title>
     <link rel="shortcut icon" type="image/logo" href="favicon.png" />
-</head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">  
 
+</head>
 <body>
+    <!--Le bloc du Loader-->
     <div class="bloc">
         <div class="bloc__loader"></div>
     </div>
+    <!--l entete de la page avec le logofavicon-->
     <div id="homepage">
         <header class="header">
             <a href="#">
                 <img class="header__image" src="images/logo/ohmyfood@2x.svg" alt="ohmyfood">
             </a>
         </header>
+    <!--La barre de recherche-->
 
         <div class="subheader">
-            <div class="subheader__content__wrapper">
+            <div class="subheader__content">
                 <div class="subheader__iconemap">
                 </div>
                 <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
@@ -30,17 +37,18 @@
 
             </div>
         </div>
-
+<!-- texte en desssous de la barre de recherche de lieux-->
         <div class="hero">
             <div class="hero__content">
                 <h1 class="hero__title">Réservez le menu qui vous convient</h1>
                 <p class="hero__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
             </div>
+        <!-- Le bouton de recherche de restaurant-->
             <button class="button">
-                <span class="button__text">Explorer nos restaurants</>
+                <span class="button__text">Explorer nos restaurants</span>
             </button>
         </div>
-
+        <!--étape de fonctionnement-->
         <main class="main">
             <section class="section section--fonctionnement">
                 <h2 class="section__title">Fonctionnement</h2>
@@ -74,6 +82,7 @@
                         <div class="step__number">
                             <span class="number--three">3</span>
                         </div>
+                <!--icone du magasin doit de couleur et le fond de du bouton violet très clair-->
                         <div class="step__icon">
                             <i class="fas fa-store i--one" aria-hidden="true"> </i>
                         </div>
@@ -82,7 +91,7 @@
                 </div>
 
             </section>
-
+<!-- la partie sur les restaurants avec les 4 photos-->
             <section class="section section--restaurants">
                 <h2 class="section__title">Restaurants</h2>
 
