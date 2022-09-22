@@ -244,7 +244,6 @@
 }
 #heart--icon:hover .fa-heart-animated {
   font-size: 20px;
-  background-color: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
 }
 
 /*-----RESPONSIVE---------- */
@@ -358,7 +357,6 @@
 }
 .section--restaurants .resto__heart:hover .fa-heart-animated {
   font-size: 25px;
-  background-color: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
 }
 
 /*------Responsive------- */
@@ -423,7 +421,7 @@
   }
 }
 .section--fonctionnement :nth-child(4) {
-  background-color: #f5edff;
+  background: #f5edff;
 }
 
 .step--fonctionnement icon :nth-child(4) {
@@ -479,8 +477,8 @@
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
   transition: opacity 3s ease-in-out;
-  -webkit-animation-delay: 1.75;
-          animation-delay: 1.75;
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -559,7 +557,7 @@
   transform: translateX(50%);
   bottom: 0;
   font-size: 0px;
-  color: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
+  background: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
   /**font-weight: bold;***/
   transition-duration: 0.5s;
 }
@@ -657,7 +655,6 @@ body {
 }
 
 .fa-check-circle {
-  content: \e7cd;
   font-size: 1.25rem;
   color: white;
   transition: transform 0.4s;
@@ -824,3 +821,11 @@ table {
 body {
   font-family: "Roboto", sans-serif;
 }/*# sourceMappingURL=style.css.map */
+
+/**<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="CSS Valide !" />
+    </a>
+</p>***/
