@@ -105,7 +105,6 @@
   
           &:hover .fa-heart-animated {
             font-size: 25px;
-            background-color: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
           }
         }
         }
@@ -199,7 +198,7 @@
     }
   }
   .section--fonctionnement :nth-child(4) {
-    background-color: #f5edff;
+    background: #f5edff;
   }
   .step--fonctionnement icon :nth-child(4){
     color: #9356dc ;
